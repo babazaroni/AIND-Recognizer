@@ -4,11 +4,8 @@
 
 [List of Logic Symbols](https://en.wikipedia.org/wiki/List_of_logic_symbols)
 
-and &and; or &or; not &not; implies &rarr;
+and &and; or &or; not &not; implies &rarr; independent &perp;
 
-&independent;
-
-\to
 
 is equivilent &harr;
 
