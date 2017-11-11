@@ -6,6 +6,8 @@
 
 and &and; or &or; not &not; implies &rarr; &rArr; independent &perp;
 
+conditioned on |
+
 
 is equivilent &harr;
 
@@ -14,3 +16,5 @@ is equivilent &harr;
 complementary probability P(A) = p &rArr; P(&not;A) = 1 - p
 
 independence X &perp; Y : Product of Marginals P(x)P(Y) = joint probability P(X,Y) 
+
+dependence P(X<sub>2</sub> = H | X<sub>1</sub>)
