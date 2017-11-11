@@ -2,9 +2,13 @@
 
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
+[List of Logic Symbols](https://en.wikipedia.org/wiki/List_of_logic_symbols)
+
 and &and; or &or; not &not; implies &rarr;
 
 &independent;
+
+\to
 
 is equivilent &harr;
 
