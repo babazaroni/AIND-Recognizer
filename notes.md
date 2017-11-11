@@ -17,4 +17,4 @@ complementary probability P(A) = p &rArr; P(&not;A) = 1 - p
 
 independence X &perp; Y : Product of Marginals P(x)P(Y) = joint probability P(X,Y) 
 
-dependence P(X<sub>2</sub> = H | X<sub>1</sub>)
+dependence P(X<sub>2</sub> = Heads | X<sub>1</sub> = Heads)
