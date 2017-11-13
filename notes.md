@@ -15,6 +15,8 @@ is equivilent &harr;
 
 ## Probabilities
 
+### Basic
+
 Conditional probabilites: use | as in P(X|Y)
 
 Joint Probabilites: use ,  as in P(X,Y)
@@ -29,7 +31,7 @@ total probability P(Y) = &sum; P(Y|X = *i*)P(X = *i*)
 
 P(&not;X|Y) = 1 - P(X|Y)
 
-## Bayes Rule
+### Bayes Rule
 
 P(X|Y) = P(Y|X)(P(X)/P(Y) or  Posterior =  Likelyhood * Prior / Marginal Likelyhood
 
