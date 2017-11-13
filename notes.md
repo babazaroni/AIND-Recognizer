@@ -32,3 +32,5 @@ P(&not;X|Y) = 1 - P(X|Y)
 ## Bayes Rule
 
 P(X|Y) = P(Y|X)(P(X)/P(Y) or  Posterior =  Likelyhood * Prior / Marginal Likelyhood
+
+P(B) often expanded to &sum; P(B|A=a)P(A=a)
