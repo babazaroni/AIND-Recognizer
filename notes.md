@@ -15,6 +15,10 @@ is equivilent &harr;
 
 ## Probabilities
 
+Conditional probabilites: use | as in P(X|Y)
+
+Joint Probabilites: use ,  as in P(X,Y)
+
 complementary probability P(A) = p &rArr; P(&not;A) = 1 - p
 
 independence X &perp; Y : Product of Marginals P(x)P(Y) = joint probability P(X,Y) 
