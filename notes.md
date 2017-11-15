@@ -27,7 +27,7 @@ independence X &perp; Y : Product of Marginals P(x)P(Y) = joint probability P(X,
 
 dependence P(X<sub>2</sub> = Heads | X<sub>1</sub> = Heads) probability X<sub>2</sub> is heads given X<sub>1</sub> is heads
 
-total probability P(Y) = &sum; P(Y|X = *i*)P(X = *i*)
+total probability P(Y) = &sum; P(Y|X = *i*)P(X = *i*)  Allows one to deduce a probability if you know all the other probabilities.
 
 P(&not;X|Y) = 1 - P(X|Y)
 
