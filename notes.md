@@ -17,7 +17,7 @@ is equivilent &harr;
 
 ### Basic
 
-Conditional probabilites: use | as in P(X|Y)
+Conditional probabilites: use | as in P(X|Y).  P(X|Y) = P(X,Y)/P(Y)
 
 Joint Probabilites: use ,  as in P(X,Y)
 
