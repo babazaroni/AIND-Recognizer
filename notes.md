@@ -49,5 +49,5 @@ Nodes can be either Evidence, Hidden, Query
 
 inference by Enumeration
 
-Speed up Enumeration by pulling out terms
+Speed up Enumeration by pulling out terms, variable elimination
 
