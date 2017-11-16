@@ -42,3 +42,7 @@ P(B) often expanded to &sum; P(B|A=a)P(A=a) for all a (Total Probability)
 Confounding
 
 Explaining away
+
+### Inference
+
+Evidence, Hidden, Query
