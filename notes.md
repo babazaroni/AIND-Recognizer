@@ -54,4 +54,7 @@ Speed up Enumeration by:
 
 2. variable elimination
   * Joining factors
+  * Elimination (summing out or marginalization)
+  
+Approximate Inference by sampling
 
