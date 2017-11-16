@@ -45,4 +45,7 @@ Explaining away
 
 ### Inference
 
-Evidence, Hidden, Query
+Nodes can be either Evidence, Hidden, Query
+
+inference by Enumeration
+
