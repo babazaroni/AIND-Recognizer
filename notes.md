@@ -52,4 +52,5 @@ inference by Enumeration
 Speed up Enumeration by:
 1. pulling out terms
 2. variable elimination
+1. Joining factors
 
