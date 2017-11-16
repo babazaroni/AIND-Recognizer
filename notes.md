@@ -58,3 +58,8 @@ Speed up Enumeration by:
   
 Approximate Inference by sampling
 
+## Hidden Markov Models
+
+DTW (dynamic time warping)
+
+
