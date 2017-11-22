@@ -77,7 +77,28 @@ class SelectorBIC(ModelSelector):
         warnings.filterwarnings("ignore", category=DeprecationWarning)
 
         # TODO implement model selection based on BIC scores
-        raise NotImplementedError
+
+        best_model = self.base_model(self.n_constant)  # default model in case of all models cause exceptions
+        best_BIC = float("inf")
+
+        for ix in range(self.min_n_components, self.max_n_components + 1):
+
+            try:
+                model = self.base_model(ix)
+                logL = model.score(self.X, self.lengths)
+
+                p = ix ** 2 + 2 * model.n_features * ix - 1
+                BIC = -2 * logL + p * np.log(len(self.X))
+
+                if BIC < best_BIC:
+                    best_BIC = BIC
+                    best_model = model
+
+
+            except Exception as e:
+                    print('SelectorBIC Exception:',e)
+
+        return best_model
 
 
 class SelectorDIC(ModelSelector):
