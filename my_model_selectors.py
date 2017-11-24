@@ -96,6 +96,7 @@ class SelectorBIC(ModelSelector):
 
 
             except Exception as e:
+                if self.verbose:
                     print('SelectorBIC Exception:',e)
 
         return best_model
@@ -115,7 +116,30 @@ class SelectorDIC(ModelSelector):
         warnings.filterwarnings("ignore", category=DeprecationWarning)
 
         # TODO implement model selection based on DIC scores
-        raise NotImplementedError
+
+        best_DIC = float('-inf')
+        best_model = None
+
+        for component_count in range(self.min_n_components, self. max_n_components):
+            model = self.base_model(component_count)
+            scores = []
+            try:
+                for word in self.words:
+                    if word != self.this_word:
+                        seqX, seqLen = self.hwords[word]
+                        scores.append(model.score(seqX, seqLen))
+
+                score = model.score(self.X, self.lengths)
+                DIC = score - sum(scores) / (len(self.words) - 1)
+                if DIC > best_DIC:
+                    best_DIC = DIC
+                    best_model = model
+
+            except Exception as e:
+                if self.verbose:
+                    print('SelectorDIC Exception:',e)
+
+        return best_model
 
 
 class SelectorCV(ModelSelector):
