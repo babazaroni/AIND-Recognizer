@@ -87,8 +87,8 @@ class SelectorBIC(ModelSelector):
                 model = self.base_model(ix)
                 logL = model.score(self.X, self.lengths)
 
-                p = ix ** 2 + 2 * model.n_features * ix - 1
-                BIC = -2 * logL + p * np.log(len(self.X))
+                p = ix**2 + 2*model.n_features*ix - 1
+                BIC = -2*logL + p*np.log(len(self.X))
 
                 if BIC < best_BIC:
                     best_BIC = BIC
@@ -118,10 +118,10 @@ class SelectorDIC(ModelSelector):
         # TODO implement model selection based on DIC scores
 
         best_DIC = float('-inf')
-        best_model = None
+        best_model = self.base_model(self.n_constant)
 
-        for component_count in range(self.min_n_components, self. max_n_components):
-            model = self.base_model(component_count)
+        for ix in range(self.min_n_components, self. max_n_components):
+            model = self.base_model(ix)
             scores = []
             try:
                 for word in self.words:
@@ -151,4 +151,34 @@ class SelectorCV(ModelSelector):
         warnings.filterwarnings("ignore", category=DeprecationWarning)
 
         # TODO implement model selection using CV
+
+        best_score = float("Inf")
+        best_model = self.base_model(self.n_constant)
+        split_method = KFold(n_splits=3)
+
+        try:
+            for ix in range(self.min_n_components, self.max_n_components+1):
+                scores = []
+
+                for train_ix, test_ix in split_method.split(self.sequences):
+                    self.X, self.lengths = combine_sequences(train_ix, self.sequences)
+                    model = self.base_model(ix)
+                    seqX, seqLen = combine_sequences(test_ix, self.sequences)
+                    scores.append(model.score(seqX, seqLen))
+
+                CV = np.mean(scores)
+
+                if CV < best_CV:
+                    best_CV = CV
+                    best_model = model
+
+        except Exception as e:
+            if self.verbose:
+                print('SelectorCV Exception:',e)
+
+
+        return best_model
+
+
+
         raise NotImplementedError
