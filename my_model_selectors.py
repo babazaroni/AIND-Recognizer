@@ -152,9 +152,9 @@ class SelectorCV(ModelSelector):
 
         # TODO implement model selection using CV
 
-        best_score = float("Inf")
+        best_CV = float("Inf")
         best_model = self.base_model(self.n_constant)
-        split_method = KFold(n_splits=3)
+        split_method = KFold(n_splits = 3)
 
         try:
             for ix in range(self.min_n_components, self.max_n_components+1):
